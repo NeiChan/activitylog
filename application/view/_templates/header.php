@@ -17,11 +17,13 @@ session_start();
 
     <!-- CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
     <link href="<?php echo URL; ?>css/bootflat.min.css" rel="stylesheet">
     <link href="<?php echo URL; ?>css/bootstrap-multiselect.css" rel="stylesheet">
     <link href="<?php echo URL; ?>css/style.css" rel="stylesheet">
 </head>
 <body>
+<a class="github-fork-ribbon" href="https://github.com/NeiChan/activitylog" title="Fork me on GitHub">Fork me on GitHub</a>
     <!-- logo -->
     <div class="logo">
         Activity Log

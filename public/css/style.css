@@ -126,3 +126,8 @@ body {
     background-color: #222;
     color: #fff;
 }
+
+.github-fork-ribbon:after
+{
+    line-height: 1em;
+}

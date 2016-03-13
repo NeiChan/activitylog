@@ -1,5 +1,6 @@
 <div style="padding:1px 0;" class="footer">
     <div style="border:0; "class="container">
+
         <div class="footer-copyright text-center">Creator : Wesley Cheung (0887267@hr.nl)</div>
     </div>
 </div>
