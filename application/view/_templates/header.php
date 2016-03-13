@@ -12,6 +12,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- JS -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <!-- please note: The JavaScript files are loaded in the footer to speed up page construction -->
     <!-- See more here: http://stackoverflow.com/q/2105327/1114320 -->
 

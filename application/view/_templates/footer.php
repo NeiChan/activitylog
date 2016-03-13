@@ -9,7 +9,6 @@
     <!-- more http://www.paulirish.com/2010/the-protocol-relative-url/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-<!--    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdImcQ9RZXL2a2tILaW95pKYusoMWK6-M&libraries=places&callback=initMap" async defer></script>
     <!-- define the project's URL (to make AJAX calls possible, even when using this in sub-folders etc) -->
     <script>

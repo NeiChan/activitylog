@@ -15,6 +15,12 @@ class Model
     }
 
     /**
+     * @EXCEL IMPORTER/EXPORT
+     */
+
+
+
+    /**
      * @USER
      */
 
@@ -277,6 +283,16 @@ class Model
         return $query->fetchAll();
     }
 
+    public function getCategoryByTitel($title, $user_id)
+    {
+        $sql = "SELECT id, titel, user_id FROM log_categories WHERE titel = :title AND user_id = :userid LIMIT 1";
+        $query = $this->db->prepare($sql);
+        $parameters = array(':title' => $title, ':userid' => $user_id);
+
+        $query->execute($parameters);
+        return $query->fetch();
+    }
+
     public function getCategory($category_id)
     {
         $sql = "SELECT id, titel, user_id FROM log_categories WHERE id = :categoryid LIMIT 1";
@@ -366,6 +382,17 @@ class Model
         return $query->fetchAll();
     }
 
+    public function getDatatypeByTitel($title, $user_id)
+    {
+        $sql = "SELECT id, titel, user_id FROM log_dataTypes WHERE titel = :title AND user_id = :userid LIMIT 1";
+        $query = $this->db->prepare($sql);
+        $parameters = array(':title' => $title, ':userid' => $user_id);
+
+        $query->execute($parameters);
+
+        return $query->fetch();
+    }
+
     public function getDatatype($datatype_id)
     {
         $sql = "SELECT id, titel, user_id FROM log_dataTypes WHERE id = :datatypeid LIMIT 1";
@@ -444,6 +471,17 @@ class Model
         // $query->fetchAll(PDO::FETCH_ASSOC); or change core/controller.php's PDO options to
         // $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC ...
         return $query->fetchAll();
+    }
+
+    public function getCompanyByTitel($title, $user_id)
+    {
+        $sql = "SELECT id, titel, user_id FROM log_companies WHERE titel = :title AND user_id = :userid LIMIT 1";
+        $query = $this->db->prepare($sql);
+        $parameters = array(':title' => $title, ':userid' => $user_id);
+
+        $query->execute($parameters);
+
+        return $query->fetch();
     }
 
     public function getCompany($company_id)
