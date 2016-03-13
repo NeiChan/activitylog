@@ -30,15 +30,16 @@ class Home extends Controller
         session_start();
 
         /** PHPExcel_IOFactory */
-        include 'PHPExcel/IOFactory.php';
+        //include 'PHPExcel/IOFactory.php';
+        include 'PHPExcel.php';
+        //PHPExcel_Settings::setZipClass(PHPExcel_Settings::PCLZIP);
 
-        if(isset($_POST["import_excel_file"]))
-        {
+        if (isset($_POST["import_excel_file"])) {
             $userid = $_SESSION["User"];
             $inputFileName = $_FILES["file"]["tmp_name"];
             $objPHPExcel = PHPExcel_IOFactory::load($inputFileName);
 
-            $sheetData = $objPHPExcel->getActiveSheet()->toArray(null,true,true,true);
+            $sheetData = $objPHPExcel->getActiveSheet()->toArray(null, true, true, true);
 
             /**
              * A = Date
@@ -51,58 +52,57 @@ class Home extends Controller
              * H = Location
              */
 
-            $form_list      = array();
+            $form_list = array();
             $datatypes_list = array();
             $companies_list = array();
 
-            foreach($sheetData as $index => $data)
-            {
-                if($index == 1):
+            foreach ($sheetData as $index => $data) {
+                if ($index == 1):
                     continue;
                 else:
                     // Find Location Coordinates (Latitude, Longitude)
-                    $address = urlencode($data["H"].' Nederland');
-                    $geocode = file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$address.'&sensor=false');
-                    $output= json_decode($geocode);
+                    $address = urlencode($data["H"] . ' Nederland');
+                    $geocode = file_get_contents('http://maps.google.com/maps/api/geocode/json?address=' . $address . '&sensor=false');
+                    $output = json_decode($geocode);
 
                     $lat = $output->results[0]->geometry->location->lat;
                     $long = $output->results[0]->geometry->location->lng;
 
-                    $date = explode('/',$data["A"]);
-                    $newDate = $date[2].'-'.sprintf("%02d", $date[0]).'-'.$date[1];
+                    $date = explode('/', $data["A"]);
+                    $newDate = $date[2] . '-' . sprintf("%02d", $date[0]) . '-' . $date[1];
 
                     $form = array(
-                        "date"          => $newDate,
-                        "time"          => $data["B"],
-                        "title"         => $data["C"],
-                        "description"   => $data["D"],
-                        "categories"    => $data["E"],
-                        "datatypes"     => "",
-                        "companies"     => "",
-                        "location"      => array(
-                            "lat"           =>  $lat,
-                            "long"          =>  $long
+                        "date" => $newDate,
+                        "time" => $data["B"],
+                        "title" => $data["C"],
+                        "description" => $data["D"],
+                        "categories" => $data["E"],
+                        "datatypes" => "",
+                        "companies" => "",
+                        "location" => array(
+                            "lat" => $lat,
+                            "long" => $long
                         )
                     );
 
-                    $datatypes = array_map("trim",explode(",", $data["F"]));
+                    $datatypes = array_map("trim", explode(",", $data["F"]));
                     $form["datatypes"] = $datatypes;
 
-                    $companies = array_map("trim",explode(",", $data["G"]));
+                    $companies = array_map("trim", explode(",", $data["G"]));
                     $form["companies"] = $companies;
 
                     array_push($form_list, $form);
 
                     // Put all the datatypes in a new list.
-                    foreach($datatypes as $data){
-                        if(!in_array(strtolower(trim($data)), array_map('strtolower',$datatypes_list), true)){
+                    foreach ($datatypes as $data) {
+                        if (!in_array(strtolower(trim($data)), array_map('strtolower', $datatypes_list), true)) {
                             array_push($datatypes_list, trim($data));
                         }
                     }
 
                     // Put all the companies in a new list.
-                    foreach($companies as $company){
-                        if(!in_array(strtolower(trim($company)), array_map('strtolower',$companies_list), true)){
+                    foreach ($companies as $company) {
+                        if (!in_array(strtolower(trim($company)), array_map('strtolower', $companies_list), true)) {
                             array_push($companies_list, trim($company));
                         }
                     }
@@ -110,28 +110,24 @@ class Home extends Controller
             }
 
             // Create datatypes
-            foreach($datatypes_list as $data)
-            {
-                if($this->model->getDatatypeByTitel($data, $userid))
-                {
-                }else {
+            foreach ($datatypes_list as $data) {
+                if ($this->model->getDatatypeByTitel($data, $userid)) {
+                } else {
                     $this->model->addDatatype($data, $userid);
                 }
             }
 
             // Create companies
-            foreach($companies_list as $company)
-            {
-                if($this->model->getCompanyByTitel($company, $userid))
-                {
-                }else {
+            foreach ($companies_list as $company) {
+                if ($this->model->getCompanyByTitel($company, $userid)) {
+                } else {
                     $this->model->addCompany($company, $userid);
                 }
             }
 
 
             // Create the activities
-            foreach($form_list as $form) {
+            foreach ($form_list as $form) {
                 // Insert and find category
                 $getCategory = $this->model->getCategoryByTitel($form["categories"], $userid);
                 if ($getCategory) {
@@ -160,10 +156,6 @@ class Home extends Controller
                         $form["companies"][$i] = $getCompanies->id;
                     }
                 }
-
-                echo '<pre>';
-                print_r($form);
-                echo '</pre>';
 
                 $this->model->addActivity($form, $userid);
                 header('location: ' . URL . 'home/index');
