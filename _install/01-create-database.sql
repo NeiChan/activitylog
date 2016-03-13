@@ -1,1 +1,1 @@
-CREATE DATABASE IF NOT EXISTS `mini`;
+CREATE DATABASE IF NOT EXISTS `activitylog_school`;
