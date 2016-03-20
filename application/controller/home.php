@@ -165,6 +165,10 @@ class Home extends Controller
 
     public function exportExcel()
     {
+        session_start();
+        $userid = $_SESSION["User"];
+        $user = $this->model->getUserByID($userid);
+        $email = $user->email;
         /** PHPExcel_IOFactory */
         include 'PHPExcel.php';
 
@@ -172,51 +176,102 @@ class Home extends Controller
         $objPHPExcel = new PHPExcel();
 
         // Set document properties
-        $objPHPExcel->getProperties()->setCreator("Maarten Balliauw")
-            ->setLastModifiedBy("Maarten Balliauw")
-            ->setTitle("Office 2007 XLSX Test Document")
-            ->setSubject("Office 2007 XLSX Test Document")
-            ->setDescription("Test document for Office 2007 XLSX, generated using PHP classes.")
-            ->setKeywords("office 2007 openxml php")
-            ->setCategory("Test result file");
+        $objPHPExcel->getProperties()->setCreator($email)
+            ->setLastModifiedBy($email)
+            ->setTitle("MEC Tracking Log of ".$email."")
+            ->setSubject("MEC Tracking Log of ".$email."")
+            ->setDescription("MEC Tracking Log of ".$email."");
 
+        $all_activities = $this->model->getAllActivities($userid);
 
-        // Add some data
+        // Add Titles
         $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Hello')
-            ->setCellValue('B1', 'world!')
-            ->setCellValue('C1', 'Hello')
-            ->setCellValue('D1', 'world!');
+            ->setCellValue('A1', 'date (dd/mm/yy)')
+            ->setCellValue('B1', 'time')
+            ->setCellValue('C1', 'title')
+            ->setCellValue('D1', 'description')
+            ->setCellValue('E1', 'category')
+            ->setCellValue('F1', 'datatypes')
+            ->setCellValue('G1', 'companies')
+            ->setCellValue('H1', 'location');
 
-        // Miscellaneous glyphs, UTF-8
-        $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A2', 'Miscellaneous glyphs')
-            ->setCellValue('A3', 'éàèùâêîôûëïüÿäöüç');
+        /** Loop through all the activities and put it in the cells */
+            $count = 2;
+            foreach($all_activities as $activity)
+            {
+                $date_explode = explode('-',$activity->l_date);
+                $date = $date_explode[2].'-'.$date_explode[1].'-'.$date_explode[0];
+                $time = $activity->l_time;
+                $title = $activity->titel;
+                $description = $activity->description;
+                $category = $this->model->getCategory($activity->category_id);
+
+                // Add some data
+                $objPHPExcel->setActiveSheetIndex(0)
+                    ->setCellValueByColumnAndRow('0', $count, $date)
+                    ->setCellValueByColumnAndRow('1', $count, $time)
+                    ->setCellValueByColumnAndRow('2', $count, $title)
+                    ->setCellValueByColumnAndRow('3', $count, $description)
+                    ->setCellValueByColumnAndRow('4', $count, $category->titel);
+
+                // Get the addresses from the latitude and longitude
+                $latitude = $activity->l_lat;
+                $longitude = $activity->l_long;
+                $geolocation = $latitude.','.$longitude;
+
+                $request = 'https://maps.googleapis.com/maps/api/geocode/json?latlng='.$geolocation.'&key=AIzaSyBdImcQ9RZXL2a2tILaW95pKYusoMWK6-M';
+                $file_contents = file_get_contents($request);
+                $json_decode = json_decode($file_contents);
+                /****************************************************************/
+                $activity_id = $activity->id;
+
+                // Get all activity data types
+                $datatypes = $this->model->getActivityDataTypes($activity_id, $userid);
+                $datatypes_output = '';
+                foreach($datatypes as $datatype){
+                    $datatypes_output .= $datatype->titel . ', ';
+                }
+
+                $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow('5', $count, $datatypes_output);
+                /****************************************************************/
+
+                // Get all activity companies
+                $companies = $this->model->getActivityCompanies($activity_id, $userid);
+                $companies_output = '';
+                foreach($companies as $company){
+                    $companies_output .= $company->titel . ', ';
+                }
+
+                $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow('6', $count, $companies_output);
+                /****************************************************************/
+
+                $converted_address = $json_decode->results[0]->formatted_address;
+                $objPHPExcel->setActiveSheetIndex(0)->setCellValueByColumnAndRow('7', $count, $converted_address);
+                $count++;
+            }
+        /** End Foreach */
 
         // Rename worksheet
         $objPHPExcel->getActiveSheet()->setTitle('Simple');
 
-
         // Set active sheet index to the first sheet, so Excel opens this as the first sheet
         $objPHPExcel->setActiveSheetIndex(0);
 
-
         // Redirect output to a client’s web browser (Excel2007)
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header('Content-Disposition: attachment;filename="01simple.xlsx"');
+        header('Content-Disposition: attachment;filename="MEC_Tracking_Log_By_'.$email.'.xlsx"');
         header('Cache-Control: max-age=0');
+
         // If you're serving to IE 9, then the following may be needed
         header('Cache-Control: max-age=1');
-
         // If you're serving to IE over SSL, then the following may be needed
         header ('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
         header ('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT'); // always modified
         header ('Cache-Control: cache, must-revalidate'); // HTTP/1.1
         header ('Pragma: public'); // HTTP/1.0
-
         $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
         $objWriter->save('php://output');
         exit;
-
+        header('location: ' . URL . 'home/index');
     }
 }

@@ -47,6 +47,17 @@ class Model
         return $query->fetch();
     }
 
+    public function getUserByID($userid)
+    {
+        $sql = "SELECT email FROM log_users WHERE id = :userid LIMIT 1";
+        $query = $this->db->prepare($sql);
+        $parameters = array(':userid' => $userid);
+
+        $query->execute($parameters);
+
+        return $query->fetch();
+    }
+
     public function insertUser($email, $created_at)
     {
         $sql = "INSERT INTO log_users (email, createdAt) VALUES (:email, :createdAt)";

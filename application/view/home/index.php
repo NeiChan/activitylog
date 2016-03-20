@@ -61,11 +61,10 @@
             <div class="panel panel-default">
                 <div class="panel-heading"><strong>Data exporter</strong></div>
                 <div class="panel-body">
-                    Work in progress..
-<!--                    <p>Do you want all your data? Click on the button to generate it.</p>-->
-<!--                    <form name="export" action="--><?php //echo URL; ?><!--home/exportExcel" method="post">-->
-<!--                        <input type="submit" name="submit" value="Export data" />-->
-<!--                    </form>-->
+                    <p>Do you want all your data? Click on the button to generate it.</p>
+                    <form name="export" action="<?php echo URL; ?>home/exportExcel" method="post">
+                        <input type="submit" name="submit" value="Export data" />
+                    </form>
                 </div>
             </div>
         </div>

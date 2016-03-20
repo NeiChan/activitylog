@@ -4,6 +4,10 @@
     <list default="true" id="b0d3e0c7-d2f8-4c08-93e6-5ab9a2674154" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controller/home.php" afterPath="$PROJECT_DIR$/application/controller/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/model/model.php" afterPath="$PROJECT_DIR$/application/model/model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/view/activities/edit.php" afterPath="$PROJECT_DIR$/application/view/activities/edit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/view/activities/index.php" afterPath="$PROJECT_DIR$/application/view/activities/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/view/home/index.php" afterPath="$PROJECT_DIR$/application/view/home/index.php" />
     </list>
     <ignored path="activitylog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,60 +28,71 @@
     <favorites_list name="activitylog" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/model/model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-54.923077">
-              <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+            <state vertical-scroll-proportion="-2.6375">
+              <caret line="49" column="31" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="31" />
               <folding>
-                <marker date="1457889456000" expanded="true" signature="427:480" placeholder="SELECT id FR... log_users" />
-                <marker date="1457889456000" expanded="true" signature="728:788" placeholder="SELECT id, e... log_users" />
-                <marker date="1457889456000" expanded="true" signature="1036:1104" placeholder="INSERT INTO log_users... " />
-                <marker date="1457889456000" expanded="true" signature="1551:1636" placeholder="SELECT * FRO... log_locations" />
-                <marker date="1457889456000" expanded="true" signature="2294:2471" placeholder="SELECT id, t... log_locations" />
-                <marker date="1457889456000" expanded="true" signature="3636:3737" placeholder="SELECT datat... log_locations_datatypes" />
-                <marker date="1457889456000" expanded="true" signature="4032:4132" placeholder="SELECT compa... log_locations_companies" />
-                <marker date="1457889456000" expanded="true" signature="5127:5307" placeholder="INSERT INTO log_locations... " />
-                <marker date="1457889456000" expanded="true" signature="5771:5883" placeholder="INSERT INTO log_locations_companies... " />
-                <marker date="1457889456000" expanded="true" signature="6187:6301" placeholder="INSERT INTO log_locations_datatypes... " />
-                <marker date="1457889456000" expanded="true" signature="6578:6661" placeholder="SELECT COUNT... log_locations" />
-                <marker date="1457889456000" expanded="true" signature="6997:7194" placeholder="UPDATE log_l... " />
-                <marker date="1457889456000" expanded="true" signature="8267:8334" placeholder="DELETE FROM " />
-                <marker date="1457889456000" expanded="true" signature="8565:8632" placeholder="DELETE FROM " />
-                <marker date="1457889456000" expanded="true" signature="8864:8912" placeholder="DELETE FROM " />
-                <marker date="1457889456000" expanded="true" signature="9353:9413" placeholder="SELECT id, t... log_categories" />
-                <marker date="1457889456000" expanded="true" signature="9670:9766" placeholder="SELECT id, t... log_categories" />
-                <marker date="1457889456000" expanded="true" signature="10030:10106" placeholder="SELECT id, t... log_categories" />
-                <marker date="1457889456000" expanded="true" signature="10365:10433" placeholder="INSERT INTO log_categories... " />
-                <marker date="1457889456000" expanded="true" signature="10842:10892" placeholder="DELETE FROM " />
-                <marker date="1457889456000" expanded="true" signature="11299:11365" placeholder="UPDATE log_c... " />
-                <marker date="1457889456000" expanded="true" signature="11798:11909" placeholder="SELECT COUNT... log_locations" />
-                <marker date="1457889456000" expanded="true" signature="12272:12356" placeholder="SELECT COUNT... log_categories" />
-                <marker date="1457889456000" expanded="true" signature="12779:12838" placeholder="SELECT id, t... log_dataTypes" />
-                <marker date="1457889456000" expanded="true" signature="13095:13190" placeholder="SELECT id, t... log_dataTypes" />
-                <marker date="1457889456000" expanded="true" signature="13455:13530" placeholder="SELECT id, t... log_dataTypes" />
-                <marker date="1457889456000" expanded="true" signature="13789:13856" placeholder="INSERT INTO log_dataTypes... " />
-                <marker date="1457889456000" expanded="true" signature="14265:14314" placeholder="DELETE FROM " />
-                <marker date="1457889456000" expanded="true" signature="14721:14786" placeholder="UPDATE log_d... " />
-                <marker date="1457889456000" expanded="true" signature="15207:15289" placeholder="SELECT COUNT... log_dataTypes" />
-                <marker date="1457889456000" expanded="true" signature="15709:15768" placeholder="SELECT id, t... log_companies" />
-                <marker date="1457889456000" expanded="true" signature="16411:16506" placeholder="SELECT id, t... log_companies" />
-                <marker date="1457889456000" expanded="true" signature="16769:16843" placeholder="SELECT id, t... log_companies" />
-                <marker date="1457889456000" expanded="true" signature="17098:17165" placeholder="INSERT INTO log_companies... " />
-                <marker date="1457889456000" expanded="true" signature="17571:17619" placeholder="DELETE FROM " />
-                <marker date="1457889456000" expanded="true" signature="18021:18084" placeholder="UPDATE log_c... " />
-                <marker date="1457889456000" expanded="true" signature="18501:18583" placeholder="SELECT COUNT... log_companies" />
+                <marker date="1458476442000" expanded="true" signature="427:480" placeholder="SELECT id FR... log_users" />
+                <marker date="1458476442000" expanded="true" signature="728:788" placeholder="SELECT id, e... log_users" />
+                <marker date="1458476442000" expanded="true" signature="1025:1079" placeholder="SELECT email... log_users" />
+                <marker date="1458476442000" expanded="true" signature="1329:1397" placeholder="INSERT INTO log_users... " />
+                <marker date="1458476442000" expanded="true" signature="1844:1929" placeholder="SELECT * FRO... log_locations" />
+                <marker date="1458476442000" expanded="true" signature="2587:2764" placeholder="SELECT id, t... log_locations" />
+                <marker date="1458476442000" expanded="true" signature="3929:4030" placeholder="SELECT datat... log_locations_datatypes" />
+                <marker date="1458476442000" expanded="true" signature="4325:4425" placeholder="SELECT compa... log_locations_companies" />
+                <marker date="1458476442000" expanded="true" signature="5420:5600" placeholder="INSERT INTO log_locations... " />
+                <marker date="1458476442000" expanded="true" signature="6064:6176" placeholder="INSERT INTO log_locations_companies... " />
+                <marker date="1458476442000" expanded="true" signature="6480:6594" placeholder="INSERT INTO log_locations_datatypes... " />
+                <marker date="1458476442000" expanded="true" signature="6871:6954" placeholder="SELECT COUNT... log_locations" />
+                <marker date="1458476442000" expanded="true" signature="7290:7487" placeholder="UPDATE log_l... " />
+                <marker date="1458476442000" expanded="true" signature="8560:8627" placeholder="DELETE FROM " />
+                <marker date="1458476442000" expanded="true" signature="8858:8925" placeholder="DELETE FROM " />
+                <marker date="1458476442000" expanded="true" signature="9157:9205" placeholder="DELETE FROM " />
+                <marker date="1458476442000" expanded="true" signature="9646:9706" placeholder="SELECT id, t... log_categories" />
+                <marker date="1458476442000" expanded="true" signature="9963:10059" placeholder="SELECT id, t... log_categories" />
+                <marker date="1458476442000" expanded="true" signature="10323:10399" placeholder="SELECT id, t... log_categories" />
+                <marker date="1458476442000" expanded="true" signature="10658:10726" placeholder="INSERT INTO log_categories... " />
+                <marker date="1458476442000" expanded="true" signature="11135:11185" placeholder="DELETE FROM " />
+                <marker date="1458476442000" expanded="true" signature="11592:11658" placeholder="UPDATE log_c... " />
+                <marker date="1458476442000" expanded="true" signature="12091:12202" placeholder="SELECT COUNT... log_locations" />
+                <marker date="1458476442000" expanded="true" signature="12565:12649" placeholder="SELECT COUNT... log_categories" />
+                <marker date="1458476442000" expanded="true" signature="13072:13131" placeholder="SELECT id, t... log_dataTypes" />
+                <marker date="1458476442000" expanded="true" signature="13388:13483" placeholder="SELECT id, t... log_dataTypes" />
+                <marker date="1458476442000" expanded="true" signature="13748:13823" placeholder="SELECT id, t... log_dataTypes" />
+                <marker date="1458476442000" expanded="true" signature="14082:14149" placeholder="INSERT INTO log_dataTypes... " />
+                <marker date="1458476442000" expanded="true" signature="14558:14607" placeholder="DELETE FROM " />
+                <marker date="1458476442000" expanded="true" signature="15014:15079" placeholder="UPDATE log_d... " />
+                <marker date="1458476442000" expanded="true" signature="15500:15582" placeholder="SELECT COUNT... log_dataTypes" />
+                <marker date="1458476442000" expanded="true" signature="16002:16061" placeholder="SELECT id, t... log_companies" />
+                <marker date="1458476442000" expanded="true" signature="16704:16799" placeholder="SELECT id, t... log_companies" />
+                <marker date="1458476442000" expanded="true" signature="17062:17136" placeholder="SELECT id, t... log_companies" />
+                <marker date="1458476442000" expanded="true" signature="17391:17458" placeholder="INSERT INTO log_companies... " />
+                <marker date="1458476442000" expanded="true" signature="17864:17912" placeholder="DELETE FROM " />
+                <marker date="1458476442000" expanded="true" signature="18314:18377" placeholder="UPDATE log_c... " />
+                <marker date="1458476442000" expanded="true" signature="18794:18876" placeholder="SELECT COUNT... log_companies" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/view/home/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20930232">
+              <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controller/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.04034582">
-              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+            <state vertical-scroll-proportion="-134.71698">
+              <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,9 +118,7 @@
         <option value="$PROJECT_DIR$/application/view/datatypes/index.php" />
         <option value="$PROJECT_DIR$/application/view/datatypes/edit.php" />
         <option value="$PROJECT_DIR$/public/js/application.js" />
-        <option value="$PROJECT_DIR$/application/view/activities/edit.php" />
         <option value="$PROJECT_DIR$/application/controller/activities.php" />
-        <option value="$PROJECT_DIR$/application/view/activities/index.php" />
         <option value="$PROJECT_DIR$/_install/01-create-database.sql" />
         <option value="$PROJECT_DIR$/_install/02-create-table-song.sql" />
         <option value="$PROJECT_DIR$/_install/03-create-table-companies.sql" />
@@ -119,10 +132,12 @@
         <option value="$PROJECT_DIR$/application/view/_templates/header.php" />
         <option value="$PROJECT_DIR$/phpexcel/Documentation/Examples/Reader/exampleReader01.php" />
         <option value="$PROJECT_DIR$/phpexcel/Examples/01simple-download-xlsx.php" />
-        <option value="$PROJECT_DIR$/application/model/model.php" />
-        <option value="$PROJECT_DIR$/application/view/home/index.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/application/view/activities/index.php" />
+        <option value="$PROJECT_DIR$/application/view/activities/edit.php" />
+        <option value="$PROJECT_DIR$/application/model/model.php" />
         <option value="$PROJECT_DIR$/application/controller/home.php" />
+        <option value="$PROJECT_DIR$/application/view/home/index.php" />
       </list>
     </option>
   </component>
@@ -136,10 +151,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="1053" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -166,6 +180,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -211,6 +227,76 @@
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activitylog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activitylog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activitylog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activitylog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="categories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activitylog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activitylog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -243,6 +329,20 @@
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activitylog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activitylog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -250,8 +350,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,7 +360,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="SearchEverywhereHistoryKey" value="excel2007&#9;FILE&#9;file:///Users/WMC/Development/Vagrant/scotch-box/public/activitylog/application/controller/PHPExcel/Reader/Excel2007.php&#10;model&#9;FILE&#9;file:///Users/WMC/Development/Vagrant/scotch-box/public/activitylog/application/model/model.php&#10;head&#9;FILE&#9;file:///Users/WMC/Development/Vagrant/scotch-box/public/activitylog/application/view/_templates/header.php&#10;footer&#9;FILE&#9;file:///Users/WMC/Development/Vagrant/scotch-box/public/activitylog/application/view/_templates/footer.php&#10;applic&#9;FILE&#9;file:///Users/WMC/Development/Vagrant/scotch-box/public/activitylog/public/js/application.js&#10;style&#9;FILE&#9;file:///Users/WMC/Development/Vagrant/scotch-box/public/activitylog/public/css/style.css&#10;applica&#9;FILE&#9;file:///Users/WMC/Development/Vagrant/scotch-box/public/activitylog/public/js/application.js&#10;home/ind&#9;FILE&#9;file:///Users/WMC/Development/Vagrant/scotch-box/public/activitylog/application/view/home/index.php&#10;appli&#9;FILE&#9;file:///Users/WMC/Development/Vagrant/scotch-box/public/activitylog/public/js/application.js&#10;google&#9;FILE&#9;file:///Users/WMC/Development/Vagrant/scotch-box/public/activitylog/application/controller/google.php&#10;goog&#9;FILE&#9;file:///Users/WMC/Development/Vagrant/scotch-box/public/activitylog/application/controller/google.php&#10;songs/index&#9;FILE&#9;file:///Users/WMC/Development/Vagrant/scotch-box/public/activitylog/application/view/songs/index.php&#10;style.css&#9;FILE&#9;file:///Users/WMC/Development/Vagrant/scotch-box/public/activitylog/public/css/style.css" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../liveflex" />
+    <property name="last_opened_file_path" value="/Applications/MAMP/htdocs/portfolio" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -317,16 +415,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="23" width="1280" height="1053" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21405493" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22455573" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22326064" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22199592" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -374,13 +472,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controller/companies.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/view/_templates/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -472,13 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controller/google.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64274323">
@@ -542,13 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/activities/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5384617">
-          <caret line="137" column="45" selection-start-line="137" selection-start-column="45" selection-end-line="137" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_install/01-create-database.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -605,13 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/activities/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8067797">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38305086">
@@ -655,13 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/home/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6160616">
-          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49339208">
@@ -690,57 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/model/model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-54.923077">
-          <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
-          <folding>
-            <marker date="1457889456000" expanded="true" signature="427:480" placeholder="SELECT id FR... log_users" />
-            <marker date="1457889456000" expanded="true" signature="728:788" placeholder="SELECT id, e... log_users" />
-            <marker date="1457889456000" expanded="true" signature="1036:1104" placeholder="INSERT INTO log_users... " />
-            <marker date="1457889456000" expanded="true" signature="1551:1636" placeholder="SELECT * FRO... log_locations" />
-            <marker date="1457889456000" expanded="true" signature="2294:2471" placeholder="SELECT id, t... log_locations" />
-            <marker date="1457889456000" expanded="true" signature="3636:3737" placeholder="SELECT datat... log_locations_datatypes" />
-            <marker date="1457889456000" expanded="true" signature="4032:4132" placeholder="SELECT compa... log_locations_companies" />
-            <marker date="1457889456000" expanded="true" signature="5127:5307" placeholder="INSERT INTO log_locations... " />
-            <marker date="1457889456000" expanded="true" signature="5771:5883" placeholder="INSERT INTO log_locations_companies... " />
-            <marker date="1457889456000" expanded="true" signature="6187:6301" placeholder="INSERT INTO log_locations_datatypes... " />
-            <marker date="1457889456000" expanded="true" signature="6578:6661" placeholder="SELECT COUNT... log_locations" />
-            <marker date="1457889456000" expanded="true" signature="6997:7194" placeholder="UPDATE log_l... " />
-            <marker date="1457889456000" expanded="true" signature="8267:8334" placeholder="DELETE FROM " />
-            <marker date="1457889456000" expanded="true" signature="8565:8632" placeholder="DELETE FROM " />
-            <marker date="1457889456000" expanded="true" signature="8864:8912" placeholder="DELETE FROM " />
-            <marker date="1457889456000" expanded="true" signature="9353:9413" placeholder="SELECT id, t... log_categories" />
-            <marker date="1457889456000" expanded="true" signature="9670:9766" placeholder="SELECT id, t... log_categories" />
-            <marker date="1457889456000" expanded="true" signature="10030:10106" placeholder="SELECT id, t... log_categories" />
-            <marker date="1457889456000" expanded="true" signature="10365:10433" placeholder="INSERT INTO log_categories... " />
-            <marker date="1457889456000" expanded="true" signature="10842:10892" placeholder="DELETE FROM " />
-            <marker date="1457889456000" expanded="true" signature="11299:11365" placeholder="UPDATE log_c... " />
-            <marker date="1457889456000" expanded="true" signature="11798:11909" placeholder="SELECT COUNT... log_locations" />
-            <marker date="1457889456000" expanded="true" signature="12272:12356" placeholder="SELECT COUNT... log_categories" />
-            <marker date="1457889456000" expanded="true" signature="12779:12838" placeholder="SELECT id, t... log_dataTypes" />
-            <marker date="1457889456000" expanded="true" signature="13095:13190" placeholder="SELECT id, t... log_dataTypes" />
-            <marker date="1457889456000" expanded="true" signature="13455:13530" placeholder="SELECT id, t... log_dataTypes" />
-            <marker date="1457889456000" expanded="true" signature="13789:13856" placeholder="INSERT INTO log_dataTypes... " />
-            <marker date="1457889456000" expanded="true" signature="14265:14314" placeholder="DELETE FROM " />
-            <marker date="1457889456000" expanded="true" signature="14721:14786" placeholder="UPDATE log_d... " />
-            <marker date="1457889456000" expanded="true" signature="15207:15289" placeholder="SELECT COUNT... log_dataTypes" />
-            <marker date="1457889456000" expanded="true" signature="15709:15768" placeholder="SELECT id, t... log_companies" />
-            <marker date="1457889456000" expanded="true" signature="16411:16506" placeholder="SELECT id, t... log_companies" />
-            <marker date="1457889456000" expanded="true" signature="16769:16843" placeholder="SELECT id, t... log_companies" />
-            <marker date="1457889456000" expanded="true" signature="17098:17165" placeholder="INSERT INTO log_companies... " />
-            <marker date="1457889456000" expanded="true" signature="17571:17619" placeholder="DELETE FROM " />
-            <marker date="1457889456000" expanded="true" signature="18021:18084" placeholder="UPDATE log_c... " />
-            <marker date="1457889456000" expanded="true" signature="18501:18583" placeholder="SELECT COUNT... log_companies" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controller/PHPExcel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33285302">
           <caret line="29" column="83" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -748,7 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38616714">
           <caret line="127" column="7" selection-start-line="127" selection-start-column="7" selection-end-line="127" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34582132">
           <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -764,14 +778,100 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13112392">
           <caret line="314" column="0" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44444445">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/activities/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6694352">
+          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/activities/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.046511628">
+          <caret line="170" column="36" selection-start-line="170" selection-start-column="36" selection-end-line="174" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/model/model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6375">
+          <caret line="49" column="31" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="31" />
+          <folding>
+            <marker date="1458476442000" expanded="true" signature="427:480" placeholder="SELECT id FR... log_users" />
+            <marker date="1458476442000" expanded="true" signature="728:788" placeholder="SELECT id, e... log_users" />
+            <marker date="1458476442000" expanded="true" signature="1025:1079" placeholder="SELECT email... log_users" />
+            <marker date="1458476442000" expanded="true" signature="1329:1397" placeholder="INSERT INTO log_users... " />
+            <marker date="1458476442000" expanded="true" signature="1844:1929" placeholder="SELECT * FRO... log_locations" />
+            <marker date="1458476442000" expanded="true" signature="2587:2764" placeholder="SELECT id, t... log_locations" />
+            <marker date="1458476442000" expanded="true" signature="3929:4030" placeholder="SELECT datat... log_locations_datatypes" />
+            <marker date="1458476442000" expanded="true" signature="4325:4425" placeholder="SELECT compa... log_locations_companies" />
+            <marker date="1458476442000" expanded="true" signature="5420:5600" placeholder="INSERT INTO log_locations... " />
+            <marker date="1458476442000" expanded="true" signature="6064:6176" placeholder="INSERT INTO log_locations_companies... " />
+            <marker date="1458476442000" expanded="true" signature="6480:6594" placeholder="INSERT INTO log_locations_datatypes... " />
+            <marker date="1458476442000" expanded="true" signature="6871:6954" placeholder="SELECT COUNT... log_locations" />
+            <marker date="1458476442000" expanded="true" signature="7290:7487" placeholder="UPDATE log_l... " />
+            <marker date="1458476442000" expanded="true" signature="8560:8627" placeholder="DELETE FROM " />
+            <marker date="1458476442000" expanded="true" signature="8858:8925" placeholder="DELETE FROM " />
+            <marker date="1458476442000" expanded="true" signature="9157:9205" placeholder="DELETE FROM " />
+            <marker date="1458476442000" expanded="true" signature="9646:9706" placeholder="SELECT id, t... log_categories" />
+            <marker date="1458476442000" expanded="true" signature="9963:10059" placeholder="SELECT id, t... log_categories" />
+            <marker date="1458476442000" expanded="true" signature="10323:10399" placeholder="SELECT id, t... log_categories" />
+            <marker date="1458476442000" expanded="true" signature="10658:10726" placeholder="INSERT INTO log_categories... " />
+            <marker date="1458476442000" expanded="true" signature="11135:11185" placeholder="DELETE FROM " />
+            <marker date="1458476442000" expanded="true" signature="11592:11658" placeholder="UPDATE log_c... " />
+            <marker date="1458476442000" expanded="true" signature="12091:12202" placeholder="SELECT COUNT... log_locations" />
+            <marker date="1458476442000" expanded="true" signature="12565:12649" placeholder="SELECT COUNT... log_categories" />
+            <marker date="1458476442000" expanded="true" signature="13072:13131" placeholder="SELECT id, t... log_dataTypes" />
+            <marker date="1458476442000" expanded="true" signature="13388:13483" placeholder="SELECT id, t... log_dataTypes" />
+            <marker date="1458476442000" expanded="true" signature="13748:13823" placeholder="SELECT id, t... log_dataTypes" />
+            <marker date="1458476442000" expanded="true" signature="14082:14149" placeholder="INSERT INTO log_dataTypes... " />
+            <marker date="1458476442000" expanded="true" signature="14558:14607" placeholder="DELETE FROM " />
+            <marker date="1458476442000" expanded="true" signature="15014:15079" placeholder="UPDATE log_d... " />
+            <marker date="1458476442000" expanded="true" signature="15500:15582" placeholder="SELECT COUNT... log_dataTypes" />
+            <marker date="1458476442000" expanded="true" signature="16002:16061" placeholder="SELECT id, t... log_companies" />
+            <marker date="1458476442000" expanded="true" signature="16704:16799" placeholder="SELECT id, t... log_companies" />
+            <marker date="1458476442000" expanded="true" signature="17062:17136" placeholder="SELECT id, t... log_companies" />
+            <marker date="1458476442000" expanded="true" signature="17391:17458" placeholder="INSERT INTO log_companies... " />
+            <marker date="1458476442000" expanded="true" signature="17864:17912" placeholder="DELETE FROM " />
+            <marker date="1458476442000" expanded="true" signature="18314:18377" placeholder="UPDATE log_c... " />
+            <marker date="1458476442000" expanded="true" signature="18794:18876" placeholder="SELECT COUNT... log_companies" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/PHPExcel/Worksheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4551495">
+          <caret line="1097" column="20" selection-start-line="1097" selection-start-column="20" selection-end-line="1097" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controller/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04034582">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        <state vertical-scroll-proportion="-134.71698">
+          <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/home/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20930232">
+          <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
           <folding />
         </state>
       </provider>

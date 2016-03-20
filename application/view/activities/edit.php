@@ -167,6 +167,13 @@
                                         }
                                         ?>
                                     </ul>
+
+                                    <img border="0" src="https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=250x150&maptype=roadmap
+                                    &markers=color:blue%7Clabel:Location%7C<?php echo $activity->l_lat?>,<?php echo $activity->l_long; ?>&key=AIzaSyBdImcQ9RZXL2a2tILaW95pKYusoMWK6-M"/>
+
+                                    <br/>
+                                    <br/>
+
                                     <div class="pull-right">
                                         <a class="btn btn-warning" href="<?php echo URL . 'activities/edit/' . htmlspecialchars($activity->id, ENT_QUOTES, 'UTF-8'); ?>"><span class="glyphicon glyphicon-pencil"></span></a>
                                         <a class="btn btn-danger"href="<?php echo URL . 'activities/delete/' . htmlspecialchars($activity->id, ENT_QUOTES, 'UTF-8'); ?>"><span class="glyphicon glyphicon-remove"></span></a>
